@@ -38,3 +38,34 @@
         line-height: 22;
     }
 }
+
+.footer{
+    &__content{
+        background: #DFDFDF;
+        padding: 60px 0 80px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info{
+        width: 540px;
+    }
+    &__info-tittle{
+        color: $tittle;
+        @extend %tittle-font;
+        margin-bottom: 14px;
+        line-height: 23px;
+    }
+    &__info-text{
+        margin-bottom: 16px;
+    }
+    &__copyright{
+        background: #363838;
+        color: #A1A1A1;
+        text-align: center;
+        padding: 42px 0px 41px;
+    }
+}
+        
+
