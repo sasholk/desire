@@ -41,6 +41,7 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/slick-carousel/slick/slick.js',
         'app/js/main.js'
     ]) // когда нужно вписать путь к нескольким файлам то ставятся квадратные скобки
         .pipe(concat('main.min.js'))
