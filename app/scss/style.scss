@@ -1048,7 +1048,8 @@
         margin: 0 6px;
     }
     &__arrow--disabled{
-        display: none;
+        opacity: 0;
+        pointer-events: none;
     }
     &__list-num{
         font-weight: 600;
@@ -1057,5 +1058,180 @@
     }
     &__list-num--active{
         color: $tittle;
+    }
+}
+
+.blog-one{
+    &__item{
+        p{
+            margin-bottom: 40px;
+        }
+        blockquote{
+            font-size: 24px;
+            font-weight: 300;
+            font-style: italic;
+            color: $tittle;
+            margin-bottom: 30px;
+            padding: 0 40px;
+        }
+        .blog__blockquote-author::before{
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+    &__tags{
+        margin-bottom: 30px;
+    }
+    &__tags-tittle{
+        color: $tittle;
+        @extend %tittle-font;
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 15px;
+    }
+    &__tags-link{
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 23px;
+        padding: 0 16px;
+        color: #8F8D8D;
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid rgba(#454647, .5);
+        border-radius: 14px;
+    }
+    &__links{
+        padding: 40px 0 32px;
+        border-top: 1px solid #DFDFDF;
+        border-bottom: 1px solid #DFDFDF;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+    &__link{
+        width: 243px;
+        position: relative;
+        font-weight: 600;
+        color: #707070;
+        font-size: 14px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 23px;
+        }
+    }
+    &__link-prev{
+        padding-left: 44px;
+        &::before{
+            background-image: url(../images/arrow-prev.svg);
+            left: 0;
+        }
+    }
+    &__link-next{
+        padding-right: 44px;
+        text-align: right;
+        &::before{
+            background-image: url(../images/arrow-next.svg);
+            right: 0;
+        }
+    }
+    &__comments-tittle{
+        color: $tittle;
+        @extend %tittle-font;
+        line-height: 31px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    &__comments-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 40px;
+    }
+    &__comments-avatar{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 13px;
+    }
+    &__reply{
+        background-color: transparent;
+        margin-left: 5px;
+        border: none;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #707070;
+    }
+    &__comments-name{
+        color: $tittle;
+        @extend %tittle-font;
+        line-height: 23px;
+    }
+    &__comments-date{
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #a1a1a1;
+    }
+    &__form-tittle{
+        color: $tittle;
+        @extend %tittle-font;
+        line-height: 23px;
+        margin-bottom: 25px;
+    }
+    &__form{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__form-textarea{
+        margin-bottom: 12px;
+        border: 1px solid #DFDFDF;
+        border-radius: 24px;
+        width: 100%;
+        padding: 14px 17px;
+        min-height: 125px;
+        resize: none;
+        &::placeholder{
+            color: #A1A1A1;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+    &__form-input{
+        border: 1px solid #DFDFDF;
+        border-radius: 20px;
+        width: 49%;
+        padding: 6px 17px;
+        margin-bottom: 20px;
+        &::placeholder{
+            color: #A1A1A1;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+    &__form-label{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #a1a1a1;
+    }
+    &__form-btn{
+        background-color: $tittle;
+        border: none;
+        color: #fffff0;
+        border-radius: 21px;
+        font-weight: 600;
+        padding: 6px 12px;
+        min-width: 180px;
+        cursor: pointer;
     }
 }
