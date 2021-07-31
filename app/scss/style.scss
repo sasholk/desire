@@ -17,6 +17,9 @@
         padding: 0;
         cursor: pointer;
     }
+    &__btn-menu{
+        display: none;
+    }
 }
 
 .logo{
@@ -35,7 +38,7 @@
     &__list-link{
         @extend %tittle-font;
         color: rgba(54, 56, 56, 0.9);
-        line-height: 22;
+        line-height: 22px;
     }
     &__list-link--active{
         padding-bottom: 4px;
@@ -243,11 +246,15 @@
     z-index: 10;
     &__list{
         display: flex;
+        overflow-x: auto;
+    }
+    &__item{
+        position: relative;
+        padding-right: 8px;
     }
     &__item::after{
         content: '/';
-        margin-left: -4px;
-        margin-right: 4px;
+        position: absolute;
     }
     &__item:last-child::after{
         display: none;
@@ -1235,3 +1242,5 @@
         cursor: pointer;
     }
 }
+
+@import 'media';

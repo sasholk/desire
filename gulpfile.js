@@ -55,7 +55,7 @@ function scripts() {
 
 function styles() { 
     return src('app/scss/style.scss')
-        .pipe(scss({outputStyle: 'compressed'})) // компрессия для css файла (для красоты кода есть 'expanded)
+        .pipe(scss({outputStyle: 'compressed'})) // компрессия css файла (для красоты кода есть 'expanded)
         .pipe(concat('style.min.css')) // переименование в min.css
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'],
