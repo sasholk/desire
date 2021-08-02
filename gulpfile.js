@@ -43,6 +43,7 @@ function scripts() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
         'app/js/main.js'
     ]) // когда нужно вписать путь к нескольким файлам то ставятся квадратные скобки
         .pipe(concat('main.min.js'))
@@ -54,7 +55,7 @@ function scripts() {
 
 function styles() { 
     return src('app/scss/style.scss')
-        .pipe(scss({outputStyle: 'compressed'})) // компрессия для css файла (для красоты кода есть 'expanded)
+        .pipe(scss({outputStyle: 'compressed'})) // компрессия css файла (для красоты кода есть 'expanded)
         .pipe(concat('style.min.css')) // переименование в min.css
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'],
